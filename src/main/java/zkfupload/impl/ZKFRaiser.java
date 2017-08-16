@@ -125,6 +125,12 @@ public class ZKFRaiser {
 		if (this.zk.exists(nodeName, false) == null){
 			this.zk.create(nodeName, data, Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 		}
+		else{
+			if (data != null){
+				this.zk.setData(nodeName, data, 0);
+			}
+			
+		}
 	}
 	
 }
