@@ -6,8 +6,8 @@ public class main {
 	public static void main(String[] args) throws Exception {
 		ZKFRaiser.newRaiser()
 		.filePath(GetResource.getPath("example.conf"))
-		.cluster("122.225.114.27:2181,122.225.114.24:2181,122.225.114.25:2181")
-		.node("/flume/collector")
+		.cluster("xxx:2181,xxx:2181,122.xxx:2181")
+		.node("/flume/client")
 		.connect()
 		.upload();
 	}
